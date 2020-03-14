@@ -239,10 +239,10 @@ function removeApple(strings) {
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
 function stringSmash(strings) {
-
-
+return (strings.reduce((accum, item)=> {
+  return accum + item;
+}));
 }
-
 // A local community center is holding a fund raising 5k fun run and has invited
 // 50 small businesses to make a small donation on their behalf for some much needed
 // updates to their facilities. Each business has assigned a representative
@@ -259,8 +259,8 @@ function stringSmash(strings) {
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
 function getFullNames(runners) {
-  runners.forEac(runners =>{
-  return `${runners.last_name} ${runners.first_name}`
+  return runners.forEac(runnersfullname =>{
+  return `${runners.last_name}, ${runners.first_name}`
 });
 }
 /**
@@ -276,12 +276,9 @@ function getFullNames(runners) {
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 function firstNamesAllCaps(runners) {
-  // return runners.map(firstName => { runners.first_name}.toUpperCase(){
-    
-  //   return true;{
-  //   }else{
-  //   return false;
-  // });
+  return runners.map(firstName => { 
+   return firstName.first_name.toUpperCase();
+  })
 }
   
 
@@ -329,10 +326,13 @@ function tallyUpDonations(runners) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ * Counter1 is a veriable which is define in global scope while counter2 is a function and define in side the function.
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ * It is a code which identified elements and we can use it letter. 
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * while counter1 is in global sope we can use it everywhere in our function and counter2 is only  specificy for funtion counter2
  *
 */
 
